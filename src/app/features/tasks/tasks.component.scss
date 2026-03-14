@@ -1,0 +1,42 @@
+.task-container{
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.add-button{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.add-btn{
+  background:#2563eb;
+  color:white;
+  border:none;
+  padding:8px 16px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.tasks-table{
+    width: auto;
+}
+
+table{
+    
+    width: 100%;
+    table-layout: auto;
+    border-collapse: collapse;
+}
+
+th{
+    text-align: left;
+    padding: 12px;
+    background:#f1f5f9;
+}
+
+td{
+    padding: 12px;
+    border-bottom: 1px solid #e2e8f0;;
+}
