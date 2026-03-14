@@ -1,17 +1,33 @@
 <div class="sidebar">
+  <div class="top-section">
+    <div class="logo">
+      <h2 class="logo">TaskFlow</h2>
+    </div>
 
-  <h2 class="logo">TaskFlow</h2>
+    <nav>
+      
+      <a routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+        <mat-icon>dashboard</mat-icon>
+        <span>Dashboard</span>
+      </a>
 
-  <nav>
+      <a routerLink="/tasks" routerLinkActive="active">
+        <mat-icon>task</mat-icon>
+        <span>Tasks</span>
+      </a>
 
-    <a routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Dashboard</a>
+      <a routerLink="/projects" routerLinkActive="active">
+        <mat-icon>folder</mat-icon>
+        <span>Projects</span>
+      </a>
 
-    <a routerLink="/tasks" routerLinkActive="active">Tasks</a>
+      <div class="logout">
+        <a routerLink="/login">
+          <mat-icon>logout</mat-icon>
+          <span>Logout</span>
+        </a>
+      </div>
 
-    <a routerLink="/projects" routerLinkActive="active">Projects</a>
-
-    <a routerLink="/login">Logout</a>
-
-  </nav>
-
+    </nav>
+  </div>
 </div>
