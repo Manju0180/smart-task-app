@@ -1,7 +1,37 @@
 <div class="task-container">
     <div class="add-button">
-        <button class="add-btn">+ Add</button>
+        <button class="add-btn" (click)="toggleForm()">+ Add</button>
     </div>
+    <div class="task-form" *ngIf="showForm">
+        <label> 
+            Task Title :
+            <input type="text"
+        placeholder="Task Title"
+        [(ngModel)]="newTask.title"
+        >
+        </label>
+        
+        <span>Task Status</span>
+        <select [(ngModel)]="newTask.status">
+            <option value="Todo">Todo</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Done">Done</option>
+        </select>
+
+        <span>Task Priority</span>
+        <select [(ngModel)]="newTask.priority">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+        
+        <span>Task Due Date</span>
+        <input type="date"
+        [(ngModel)]="newTask.dueDate">
+
+        <button (click)="addTask()">Add Task</button>
+    </div>
+    
     <div class="tasks-table">
         <table>
             <thead>
@@ -15,7 +45,7 @@
             <tbody>
                 <tr *ngFor="let task of tasks">
                     <td>{{task.title}}</td>
-                    <td>{{task.status}}</td>
+                    <td (click)="changeStatus(task)" style="cursor: pointer;">{{task.status}}</td>
                     <td>{{task.priority}}</td>
                     <td>{{task.dueDate}}</td>
                 </tr>
